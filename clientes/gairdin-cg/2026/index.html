@@ -4,38 +4,164 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gairdin CG | Hub 2026</title>
-  <meta name="description" content="Hub mensal dos relatórios de 2026 do cliente Gairdin CG." />
+  <meta name="description" content="Hub mensal dos relatórios de 2026 do cliente Gairdin CG, separado por Tráfego Pago e Orgânico." />
   <link rel="icon" type="image/svg+xml" href="../../../assets/logo-brandfield.svg" />
   <style>
-    :root { --bg:#101010; --card:#1c1c1c; --text:#f5edd8; --muted:#cbbfa8; --brand:#8bc34a; --border:#2f2f2f; }
-    *{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:"DM Sans",Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top, rgba(139,195,74,.12), transparent 45%), var(--bg)}
-    main{width:min(900px,92vw);margin:0 auto;padding:2rem 0 3rem} h1{margin:.2rem 0 1.2rem;font-family:"Playfair Display",Georgia,serif}
-    p{color:var(--muted);margin:0 0 1.4rem}.back{color:var(--brand);text-decoration:none;font-weight:700}
-    .grid{display:grid;grid-template-columns:1fr;gap:1rem;list-style:none;padding:0}.card{display:block;padding:1rem;border-radius:14px;border:1px solid var(--border);background:var(--card);color:var(--text);text-decoration:none}
-    .card:hover,.card:focus-visible{border-color:var(--brand);outline:none}.title{margin:0 0 .3rem;font-family:"Playfair Display",Georgia,serif}.path{margin:0;color:var(--muted);font-size:.92rem}
-    @media (min-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    :root {
+      --bg: #101010;
+      --card: #1c1c1c;
+      --text: #f5edd8;
+      --muted: #cbbfa8;
+      --brand: #8bc34a;
+      --border: #2f2f2f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top, rgba(139, 195, 74, 0.12), transparent 45%), var(--bg);
+    }
+
+    main {
+      width: min(980px, 92vw);
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .back {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 0.9rem;
+    }
+
+    h1 {
+      margin: 0.1rem 0 0.8rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+    }
+
+    .subtitle {
+      margin: 0 0 1.6rem;
+      color: var(--muted);
+      max-width: 65ch;
+    }
+
+    .section {
+      margin-top: 1.7rem;
+    }
+
+    .section-title {
+      margin: 0 0 0.75rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 4px rgba(139, 195, 74, 0.2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .card {
+      display: block;
+      padding: 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #212121, var(--card));
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease;
+    }
+
+    .card:hover,
+    .card:focus-visible {
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .title {
+      margin: 0 0 0.35rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.2rem;
+    }
+
+    .path {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      word-break: break-word;
+    }
+
+    @media (min-width: 760px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <a class="back" href="../../../index.html">← Voltar ao Hub Principal</a>
     <h1>Gairdin CG · Relatórios 2026</h1>
-    <p>Escolha o mês do relatório que deseja abrir.</p>
+    <p class="subtitle">Escolha o tipo de relatório e depois o mês. Essa estrutura foi preparada para escalar em todos os hubs de clientes.</p>
 
-    <ul class="grid" aria-label="Relatórios mensais de Gairdin CG em 2026">
-      <li>
-        <a class="card" href="janeiro/index.html">
-          <h2 class="title">2026 · Janeiro</h2>
-          <p class="path">/clientes/gairdin-cg/2026/janeiro/</p>
-        </a>
-      </li>
-      <li>
-        <a class="card" href="fevereiro/index.html">
-          <h2 class="title">2026 · Fevereiro</h2>
-          <p class="path">/clientes/gairdin-cg/2026/fevereiro/</p>
-        </a>
-      </li>
-    </ul>
+    <section class="section" aria-labelledby="titulo-trafego-pago">
+      <h2 id="titulo-trafego-pago" class="section-title">Tráfego Pago</h2>
+      <ul class="grid" aria-label="Relatórios de tráfego pago de Gairdin CG em 2026">
+        <li>
+          <a class="card" href="janeiro/index.html">
+            <h3 class="title">2026 · Janeiro — Tráfego Pago</h3>
+            <p class="path">/clientes/gairdin-cg/2026/janeiro/</p>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="fevereiro/index.html">
+            <h3 class="title">2026 · Fevereiro — Tráfego Pago</h3>
+            <p class="path">/clientes/gairdin-cg/2026/fevereiro/</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-organico">
+      <h2 id="titulo-organico" class="section-title">Orgânico (Instagram e outros)</h2>
+      <ul class="grid" aria-label="Relatórios orgânicos de Gairdin CG em 2026">
+        <li>
+          <a class="card" href="organico/janeiro/index.html">
+            <h3 class="title">2026 · Janeiro — Orgânico</h3>
+            <p class="path">/clientes/gairdin-cg/2026/organico/janeiro/</p>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="organico/fevereiro/index.html">
+            <h3 class="title">2026 · Fevereiro — Orgânico</h3>
+            <p class="path">/clientes/gairdin-cg/2026/organico/fevereiro/</p>
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>
