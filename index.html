@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hub central de dashboards de performance da agência BrandField." />
+  <meta name="theme-color" content="#101010" />
+  <title>Hub de Performance | BrandField</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo-brandfield.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      /* BrandField identity (alinhada ao visual dos relatórios) */
+      --bg: #101010;
+      --surface: #1c1c1c;
+      --surface-soft: #232323;
+      --brand: #8bc34a;
+      --brand-strong: #9cd95a;
+      --text: #f5edd8;
+      --text-soft: #cbbfa8;
+      --border: #2f2f2f;
+      --focus-ring: 0 0 0 3px rgba(139, 195, 74, 0.32);
+      --radius: 16px;
+      --container: min(1160px, 92vw);
+      --easing: 180ms ease;
+      --shadow-sm: 0 8px 18px rgba(0, 0, 0, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
+      line-height: 1.5;
+      background:
+        radial-gradient(1200px 500px at 10% -20%, rgba(139, 195, 74, 0.12), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(139, 195, 74, 0.08), transparent 60%),
+        var(--bg);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 2rem 0 3rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .brand-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      background: linear-gradient(160deg, #303030, #121212);
+      border: 1px solid #3a3a3a;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+      display: grid;
+      place-items: center;
+      color: var(--brand);
+      font: 700 1rem/1 "Playfair Display", Georgia, serif;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-label {
+      margin: 0;
+      color: var(--text-soft);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0.15rem 0 0;
+      font: 700 clamp(1.75rem, 3vw, 2.5rem)/1.1 "Playfair Display", Georgia, serif;
+      text-wrap: balance;
+    }
+
+    .intro {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--text-soft);
+      font-size: 1rem;
+    }
+
+    .clients-grid {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-link {
+      display: block;
+      height: 100%;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--surface-soft), var(--surface));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 1.05rem;
+      min-height: 182px;
+      transition: transform var(--easing), border-color var(--easing), box-shadow var(--easing);
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .card-link::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      left: -90px;
+      top: -100px;
+      background: radial-gradient(circle, rgba(139, 195, 74, 0.22), transparent 70%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity var(--easing);
+    }
+
+    .card-link:hover,
+    .card-link:focus-visible {
+      transform: translateY(-3px);
+      border-color: rgba(139, 195, 74, 0.7);
+      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.32);
+      outline: none;
+    }
+
+    .card-link:focus-visible {
+      box-shadow: var(--focus-ring), 0 16px 24px rgba(0, 0, 0, 0.32);
+    }
+
+    .card-link:hover::before,
+    .card-link:focus-visible::before {
+      opacity: 1;
+    }
+
+    .client-name {
+      margin: 0 0 0.95rem;
+      font: 700 1.3rem/1.2 "Playfair Display", Georgia, serif;
+    }
+
+    .tags {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #102106;
+      background: linear-gradient(120deg, var(--brand), var(--brand-strong));
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      white-space: nowrap;
+    }
+
+    .client-path {
+      margin: 1rem 0 0;
+      color: var(--text-soft);
+      font-size: 0.88rem;
+    }
+
+    .client-path strong {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    @media (min-width: 680px) {
+      .clients-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 980px) {
+      .clients-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .clients-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="brand" aria-label="Identidade BrandField">
+        <div class="brand-badge" aria-hidden="true">BF</div>
+        <div>
+          <p class="brand-label">BrandField</p>
+          <h1>Hub de Performance</h1>
+        </div>
+      </div>
+    </header>
+
+    <p class="intro">
+      Portal centralizado para navegação dos relatórios de performance. Selecione o cliente para acessar os sub-hubs de Tráfego Pago e Orgânico, organizados por ano e mês.
+    </p>
+
+    <ul class="clients-grid" aria-label="Clientes ativos da BrandField">
+      <li>
+        <a class="card-link" href="clientes/gairdin-cg/" aria-label="Acessar dashboards do cliente Gairdin CG">
+          <h2 class="client-name">Gairdin CG</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Gairdin CG">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Google Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/gairdin-cg/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/gairdin-sp/" aria-label="Acessar dashboards do cliente Gairdin SP">
+          <h2 class="client-name">Gairdin SP</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Gairdin SP">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Google Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/gairdin-sp/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/funky-fresh/" aria-label="Acessar dashboards do cliente Funky Fresh">
+          <h2 class="client-name">Funky Fresh</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Funky Fresh">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Google Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/funky-fresh/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/dois-amores-doces/" aria-label="Acessar dashboards do cliente Dois Amores Doces">
+          <h2 class="client-name">Dois Amores Doces</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Dois Amores Doces">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Google Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/dois-amores-doces/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/dois-amores-garden/" aria-label="Acessar dashboards do cliente Dois Amores Garden">
+          <h2 class="client-name">Dois Amores Garden</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Dois Amores Garden">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Google Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/dois-amores-garden/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/demolicao-cristao/" aria-label="Acessar dashboards do cliente Demolição Cristão">
+          <h2 class="client-name">Demolição Cristão</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Demolição Cristão">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/demolicao-cristao/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/thomaz-lanches/" aria-label="Acessar dashboards do cliente Thomaz Lanches">
+          <h2 class="client-name">Thomaz Lanches</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Thomaz Lanches">
+            <li class="tag">Meta Ads</li>
+            <li class="tag">Google Ads</li>
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/thomaz-lanches/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/casa-colonial/" aria-label="Acessar dashboards do cliente Casa Colonial">
+          <h2 class="client-name">Casa Colonial</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Casa Colonial">
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/casa-colonial/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/decanter/" aria-label="Acessar dashboards do cliente Enoteca Decanter">
+          <h2 class="client-name">Enoteca Decanter</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Enoteca Decanter">
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/decanter/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/terroir/" aria-label="Acessar dashboards do cliente Terroir Cozinha">
+          <h2 class="client-name">Terroir Cozinha</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Terroir Cozinha">
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/terroir/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/villa-raiano/" aria-label="Acessar dashboards do cliente Villa Raiano">
+          <h2 class="client-name">Villa Raiano</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de Villa Raiano">
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/villa-raiano/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/mt-tastes/" aria-label="Acessar dashboards do cliente MT Tastes">
+          <h2 class="client-name">MT Tastes</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de MT Tastes">
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/mt-tastes/</strong></p>
+        </a>
+      </li>
+
+      <li>
+        <a class="card-link" href="clientes/msconecta/" aria-label="Acessar dashboards do cliente MS Conecta">
+          <h2 class="client-name">MS Conecta</h2>
+          <ul class="tags" aria-label="Plataformas e canais ativos de MS Conecta">
+            <li class="tag">Orgânico</li>
+          </ul>
+          <p class="client-path">Diretório: <strong>/clientes/msconecta/</strong></p>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

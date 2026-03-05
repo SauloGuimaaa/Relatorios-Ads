@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# Force UTF-8 for all web/report source files to avoid Windows CP-1252 mojibake
+*.html text working-tree-encoding=UTF-8 eol=lf
+*.css text working-tree-encoding=UTF-8 eol=lf
+*.js text working-tree-encoding=UTF-8 eol=lf
+*.svg text working-tree-encoding=UTF-8 eol=lf
+*.md text working-tree-encoding=UTF-8 eol=lf
