@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FTX Imóveis · 2026 | BrandField Performance</title>
+  <meta name="description" content="Relatórios de performance 2026 — FTX Imóveis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #090909;
+      --surface: #111111;
+      --surface-hover: #1a1a1a;
+      --primary: #8bc34a;
+      --magenta: #e040fb;
+      --cyan: #00bcd4;
+      --ig: #E1306C;
+      --text: #f5edd8;
+      --muted: #888;
+      --mt: #555;
+      --border: #222222;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      padding: 2.5rem 0 4rem;
+    }
+
+    /* Header sticky */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9,9,9,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 0;
+      margin-bottom: 2.5rem;
+    }
+    .topbar-inner {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 1rem; }
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--primary); }
+    .topbar-title { font-size: 0.95rem; font-weight: 500; }
+    .topbar-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--primary);
+      background: rgba(139,195,74,0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+    .topbar-analyst { font-size: 0.78rem; color: var(--muted); }
+
+    /* Hero */
+    .hero { margin-bottom: 3rem; }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--magenta); }
+    .hero p { color: var(--muted); font-size: 0.98rem; }
+
+    /* Section */
+    .section { margin-bottom: 3rem; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+    }
+    .section-icon.ig { background: rgba(225,48,108,0.15); }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    /* Cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Report card */
+    .report-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: border-color 0.2s, transform 0.2s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .report-card.available {
+      cursor: pointer;
+    }
+    .report-card.available:hover {
+      border-color: rgba(139,195,74,0.6);
+      background: var(--surface-hover);
+      transform: translateY(-3px);
+    }
+    .report-card.soon {
+      opacity: 0.55;
+      cursor: default;
+    }
+
+    .card-month {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .card-type {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(251,188,4,0.12);
+      color: #fbbc04;
+      border: 1px solid rgba(251,188,4,0.25);
+      margin-top: auto;
+      width: fit-content;
+    }
+
+    .badge-available {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(139,195,74,0.12);
+      color: var(--primary);
+      border: 1px solid rgba(139,195,74,0.25);
+      margin-top: auto;
+      width: fit-content;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-brand { font-size: 0.82rem; color: var(--muted); }
+    .footer-brand strong { color: var(--primary); }
+    .footer-analyst { font-size: 0.78rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a class="back-link" href="../index.html">← FTX Imóveis</a>
+        <span class="topbar-title">Relatórios</span>
+        <span class="topbar-year">2026</span>
+      </div>
+      <span class="topbar-analyst">Performance Analyst: Saulo Guimarães</span>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <section class="hero">
+      <h1>FTX Imóveis · <em>2026</em></h1>
+      <p>Relatórios mensais de performance orgânica — Instagram.</p>
+    </section>
+
+    <!-- Orgânico -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-icon ig">📸</div>
+        <span class="section-title">Orgânico (Instagram)</span>
+      </div>
+      <div class="cards-grid">
+
+        <div class="report-card soon">
+          <div class="card-type">Orgânico</div>
+          <div class="card-month">Janeiro</div>
+          <span class="badge-soon">⏳ Em breve</span>
+        </div>
+
+        <div class="report-card soon">
+          <div class="card-type">Orgânico</div>
+          <div class="card-month">Fevereiro</div>
+          <span class="badge-soon">⏳ Em breve</span>
+        </div>
+
+        <div class="report-card soon">
+          <div class="card-type">Orgânico</div>
+          <div class="card-month">Março</div>
+          <span class="badge-soon">⏳ Em breve</span>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-brand"><strong>BrandField</strong> Agência Criativa · FTX Imóveis</div>
+      <div class="footer-analyst">Performance Analyst: Saulo Guimarães</div>
+    </footer>
+  </div>
+</body>
+</html>
