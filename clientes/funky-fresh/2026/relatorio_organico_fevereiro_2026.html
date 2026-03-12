@@ -434,6 +434,382 @@ footer img{height:30px;opacity:.55;}.ftext{font-size:12px;color:var(--mt);text-a
 </div></div>
 </section>
 
+
+<!-- ██████████████ SEÇÃO IFOOD ██████████████ -->
+<section class="sec" id="ifood" style="border-top:2px solid rgba(234,29,44,.25);margin-top:60px;padding-top:20px">
+  <div class="sec-hdr">
+    <div class="sec-icon" style="background:rgba(234,29,44,.15);color:#EA1D2C;font-size:20px">&#127829;</div>
+    <h2 class="sec-title">iFood &mdash; Fevereiro 2026</h2>
+    <div class="sec-line" style="background:linear-gradient(90deg,#EA1D2C,transparent)"></div>
+  </div>
+
+  <style>
+    .funil-bar-wrap{background:#1a1a1a;border-radius:6px;height:10px;margin-bottom:6px;overflow:hidden}
+    .funil-bar{height:10px;background:linear-gradient(90deg,#EA1D2C,#ff6b6b);border-radius:6px;transition:width 0s}
+    .funil-info{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+    .funil-emoji{font-size:16px;min-width:22px}
+    .funil-label{color:#ccc;font-size:14px;font-weight:500;min-width:140px}
+    .funil-val{font-family:"JetBrains Mono",monospace;color:#fff;font-size:18px;font-weight:700;flex:1}
+    .funil-connector{text-align:left;padding:4px 0 4px 30px;margin-bottom:6px}
+    .funil-drop{font-family:"JetBrains Mono",monospace;font-size:12px;color:#EA1D2C;background:rgba(234,29,44,.08);padding:3px 10px;border-radius:4px;border-left:2px solid #EA1D2C}
+    #ifood table tr:not(:last-child) td{border-bottom:1px solid #1a1a1a}
+    #ifood table tr:hover td{background:rgba(255,255,255,.02)}
+    .oport-card{background:#0d0d0d;border:1px solid #fbbc04;border-radius:12px;padding:24px;margin-top:20px}
+    .oport-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+    .oport-item{background:#111;border:1px solid #222;border-radius:10px;padding:18px}
+    .oport-icon{font-size:22px;margin-bottom:8px}
+    .oport-title{font-size:14px;font-weight:700;color:#fbbc04;margin-bottom:8px}
+    .oport-body{font-size:13px;color:#aaa;line-height:1.6}
+  </style>
+
+  <!-- KPI Cards Principais -->
+  <div class="kgrid">
+    <div class="kcard" style="border-color:rgba(234,29,44,.3)">
+      <div class="klabel">Pedidos Conclu&iacute;dos</div>
+      <div class="kval" style="color:#EA1D2C">248</div>
+      <div class="ksub">fev/2026</div>
+    </div>
+    <div class="kcard" style="border-color:rgba(139,195,74,.3)">
+      <div class="klabel">Faturamento Bruto</div>
+      <div class="kval" style="color:#8bc34a">R$ 36.858,71</div>
+      <div class="ksub">total pago pelos clientes</div>
+    </div>
+    <div class="kcard" style="border-color:rgba(0,188,212,.3)">
+      <div class="klabel">Ticket M&eacute;dio</div>
+      <div class="kval" style="color:#00bcd4">R$ 148,62</div>
+      <div class="ksub">por pedido conclu&iacute;do</div>
+    </div>
+    <div class="kcard" style="border-color:rgba(224,64,251,.3)">
+      <div class="klabel">Valor L&iacute;quido</div>
+      <div class="kval" style="color:#e040fb">R$ 24.813,98</div>
+      <div class="ksub">ap&oacute;s taxas e comiss&otilde;es</div>
+    </div>
+    <div class="kcard" style="border-color:rgba(251,188,4,.3)">
+      <div class="klabel">Cancelamentos</div>
+      <div class="kval" style="color:#fbbc04">6</div>
+      <div class="ksub">taxa: 2,4%</div>
+    </div>
+    <div class="kcard" style="border-color:rgba(234,29,44,.3)">
+      <div class="klabel">Incentivos iFood</div>
+      <div class="kval" style="color:#EA1D2C">R$ 843,21</div>
+      <div class="ksub">promos aplicadas pelo iFood</div>
+    </div>
+  </div>
+
+  <!-- Funil de Conversão do Cardápio -->
+  <h3 style="font-family:'Playfair Display',serif;color:#fff;margin:40px 0 4px;font-size:18px">Funil de Convers&atilde;o do Card&aacute;pio</h3>
+  <p style="color:#666;font-size:12px;margin:0 0 20px">Per&iacute;odo: <strong style="color:#aaa">08/02/2026 - 09/03/2026</strong> &nbsp;&mdash;&nbsp; &#9650; melhora vs per&iacute;odo anterior &nbsp;&#9660; piora</p>
+
+  <div style="display:grid;grid-template-columns:1fr 200px;gap:24px;align-items:start">
+    <!-- Barras do funil -->
+    <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;padding:24px">
+      
+<div class="funil-step">
+  <div class="funil-bar-wrap"><div class="funil-bar" style="width:100%"></div></div>
+  <div class="funil-info">
+    <span class="funil-emoji">&#128065;</span>
+    <span class="funil-label">Visitas</span>
+    <span class="funil-val">2.309</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#555">100,0% da etapa anterior</span>
+    <span class="var stable">&rarr; 0,8%</span>
+  </div>
+</div><div class="funil-connector"><span class="funil-drop">&#9660; 46,3% visualizaram o card&aacute;pio</span></div>
+<div class="funil-step">
+  <div class="funil-bar-wrap"><div class="funil-bar" style="width:46.3%"></div></div>
+  <div class="funil-info">
+    <span class="funil-emoji">&#128203;</span>
+    <span class="funil-label">Visualiza&ccedil;&otilde;es</span>
+    <span class="funil-val">1.068</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#555">46,3% da etapa anterior</span>
+    <span class="var up">&#9650; 2,0%</span>
+  </div>
+</div><div class="funil-connector"><span class="funil-drop">&#9660; 35,5% adicionaram &agrave; sacola</span></div>
+<div class="funil-step">
+  <div class="funil-bar-wrap"><div class="funil-bar" style="width:35.5%"></div></div>
+  <div class="funil-info">
+    <span class="funil-emoji">&#128722;</span>
+    <span class="funil-label">Sacola</span>
+    <span class="funil-val">379</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#555">35,5% da etapa anterior</span>
+    <span class="var down">&#9660; 5,7%</span>
+  </div>
+</div><div class="funil-connector"><span class="funil-drop">&#9660; 92,9% foram para revis&atilde;o</span></div>
+<div class="funil-step">
+  <div class="funil-bar-wrap"><div class="funil-bar" style="width:92.9%"></div></div>
+  <div class="funil-info">
+    <span class="funil-emoji">&#9989;</span>
+    <span class="funil-label">Revis&atilde;o</span>
+    <span class="funil-val">352</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#555">92,9% da etapa anterior</span>
+    <span class="var down">&#9660; 9,0%</span>
+  </div>
+</div><div class="funil-connector"><span class="funil-drop">&#9660; 72,4% conclu&iacute;ram o pedido</span></div>
+<div class="funil-step">
+  <div class="funil-bar-wrap"><div class="funil-bar" style="width:72.4%"></div></div>
+  <div class="funil-info">
+    <span class="funil-emoji">&#127881;</span>
+    <span class="funil-label">Conclu&iacute;dos</span>
+    <span class="funil-val">255</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#555">72,4% da etapa anterior</span>
+    <span class="var down">&#9660; 10,5%</span>
+  </div>
+</div>
+      <!-- Sacola → Concluídos destaque -->
+      <div style="margin-top:12px;padding:14px 16px;background:rgba(251,188,4,.06);border:1px solid rgba(251,188,4,.25);border-radius:8px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <span style="font-size:13px;color:#fbbc04;font-weight:600">&#128722; Sacola &rarr; Conclu&iacute;dos</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:#fbbc04">67,3%</span>
+        <span style="font-size:12px;color:#888">(124 clientes abandonaram a sacola)</span>
+      </div>
+      <div style="border-top:1px solid #222;padding-top:14px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+        <span style="color:#aaa;font-size:13px">Taxa de Convers&atilde;o Geral (Visitas &rarr; Pedido)</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:#EA1D2C">11,0%</span>
+        <span class="var down">&#9660; 9,8%</span>
+        <span style="color:#555;font-size:11px">anterior: 12,2%</span>
+      </div>
+    </div>
+    <!-- Painel resumo -->
+    <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;padding:20px;display:grid;gap:16px">
+      <div style="text-align:center">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:#fff">2.309</div>
+        <div style="font-size:11px;color:#666">visitaram a loja</div>
+      </div>
+      <div style="border-top:1px solid #1a1a1a;padding-top:14px;text-align:center">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:#8bc34a">255</div>
+        <div style="font-size:11px;color:#666">conclu&iacute;ram pedido</div>
+      </div>
+      <div style="border-top:1px solid #1a1a1a;padding-top:14px;text-align:center">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:#EA1D2C">11,0%</div>
+        <div style="font-size:11px;color:#666">convers&atilde;o</div>
+      </div>
+      <div style="border-top:1px solid #1a1a1a;padding-top:14px;background:rgba(251,188,4,.05);border-radius:8px;padding:12px;text-align:center">
+        <div style="font-size:11px;color:#fbbc04">&#9888; sacola abandonada</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:#fbbc04;font-weight:700">124</div>
+        <div style="font-size:10px;color:#555">adicionaram mas n&atilde;o pediram</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid: Turnos + Entrega + Pagamento -->
+  <div class="crow" style="margin-top:32px">
+    <!-- Turnos -->
+    <div>
+      <h3 style="font-size:14px;color:#ccc;margin:0 0 14px;font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">&#9728; Pedidos por Turno</h3>
+      <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr style="border-bottom:1px solid #222">
+              <th style="padding:8px 12px;text-align:left;font-size:10px;color:#444;width:30px"></th>
+              <th style="padding:8px 12px;text-align:left;font-size:10px;color:#444">Turno</th>
+              <th style="padding:8px 12px;text-align:right;font-size:10px;color:#444">Pedidos</th>
+              <th style="padding:8px 12px;text-align:right;font-size:10px;color:#444">%</th>
+              <th style="padding:8px 12px;font-size:10px;color:#444;width:90px"></th>
+              <th style="padding:8px 12px;text-align:right;font-size:10px;color:#444">Faturamento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+  <td style="padding:10px 12px;font-size:18px">&#9728;</td>
+  <td style="padding:10px 12px;color:#ddd">Almoço</td>
+  <td style="padding:10px 12px;text-align:right;font-family:'JetBrains Mono',monospace;color:#fff;font-weight:700">150</td>
+  <td style="padding:10px 12px;text-align:right;font-size:12px;color:#aaa">60,5%</td>
+  <td style="padding:10px 12px;width:100px"><div style="height:6px;background:#222;border-radius:3px"><div style="height:6px;background:#EA1D2C;width:100%;border-radius:3px"></div></div></td>
+  <td style="padding:10px 12px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">R$ 22.530,98</td>
+</tr><tr>
+  <td style="padding:10px 12px;font-size:18px">&#127769;</td>
+  <td style="padding:10px 12px;color:#ddd">Jantar</td>
+  <td style="padding:10px 12px;text-align:right;font-family:'JetBrains Mono',monospace;color:#fff;font-weight:700">92</td>
+  <td style="padding:10px 12px;text-align:right;font-size:12px;color:#aaa">37,1%</td>
+  <td style="padding:10px 12px;width:100px"><div style="height:6px;background:#222;border-radius:3px"><div style="height:6px;background:#EA1D2C;width:61%;border-radius:3px"></div></div></td>
+  <td style="padding:10px 12px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">R$ 13.411,67</td>
+</tr><tr>
+  <td style="padding:10px 12px;font-size:18px">&#9749;</td>
+  <td style="padding:10px 12px;color:#ddd">Café Da Tarde</td>
+  <td style="padding:10px 12px;text-align:right;font-family:'JetBrains Mono',monospace;color:#fff;font-weight:700">6</td>
+  <td style="padding:10px 12px;text-align:right;font-size:12px;color:#aaa">2,4%</td>
+  <td style="padding:10px 12px;width:100px"><div style="height:6px;background:#222;border-radius:3px"><div style="height:6px;background:#EA1D2C;width:4%;border-radius:3px"></div></div></td>
+  <td style="padding:10px 12px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">R$ 916,06</td>
+</tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Entrega + Pagamento -->
+    <div style="display:grid;gap:20px">
+      <div>
+        <h3 style="font-size:14px;color:#ccc;margin:0 0 14px;font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">&#128666; Tipo de Entrega</h3>
+        <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;padding:18px">
+          <div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">Entrega iFood</span><span class="bnum">242 (97,6%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#EA1D2C;width:100%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:100%;--d:0.2s"></div></div>
+</div><div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">Retirada no local</span><span class="bnum">6 (2,4%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#fbbc04;width:2%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:2%;--d:0.2s"></div></div>
+</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:14px;color:#ccc;margin:0 0 14px;font-family:'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.05em">&#128179; Forma de Pagamento</h3>
+        <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;padding:18px">
+          <div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">Crédito</span><span class="bnum">134 (54,0%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#EA1D2C;width:100%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:100%;--d:0.2s"></div></div>
+</div><div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">Carteira Digital</span><span class="bnum">39 (15,7%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#00bcd4;width:29%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:29%;--d:0.2s"></div></div>
+</div><div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">PIX</span><span class="bnum">39 (15,7%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#8bc34a;width:29%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:29%;--d:0.2s"></div></div>
+</div><div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">Outros</span><span class="bnum">34 (13,7%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#888;width:25%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:25%;--d:0.2s"></div></div>
+</div><div class="bitem" style="margin-bottom:10px">
+  <div class="brow"><span class="blabel">Dinheiro</span><span class="bnum">2 (0,8%)</span></div>
+  <div class="btrack"><div class="bfill" style="background:#fbbc04;width:1%;height:8px;border-radius:4px;animation:grow 1s ease forwards;--w:1%;--d:0.2s"></div></div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top 5 Pratos -->
+  <h3 style="font-family:'Playfair Display',serif;color:#fff;margin:36px 0 14px;font-size:18px">
+    Top 5 Pratos no Card&aacute;pio
+    <em style="color:#e040fb;font-size:13px;font-family:'DM Sans',sans-serif;font-style:normal;margin-left:8px">por n&uacute;mero de pedidos</em>
+  </h3>
+  <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;overflow:hidden">
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr style="border-bottom:1px solid #222">
+          <th style="padding:10px 14px;text-align:center;font-size:10px;color:#444;width:40px">#</th>
+          <th style="padding:10px 14px;text-align:left;font-size:10px;color:#444">Prato</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;color:#444">Visitas</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;color:#EA1D2C">Pedidos</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;color:#444">Convers&atilde;o</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;color:#444">Qtd Vendida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#111111">
+  <td style="padding:10px 14px;text-align:center;font-size:18px">&#129351;</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Strogonoff de Filé</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#aaa">115</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">33</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#fbbc04">28,7%</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#00bcd4">43</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">&#129352;</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Tilápia com purê de mandioquinha</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#aaa">76</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">31</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">40,8%</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#00bcd4">31</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">&#129353;</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Risoto de Parmesão com Fraldinha Red</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#aaa">136</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">30</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#fbbc04">22,1%</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#00bcd4">34</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">4.</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Salmon Hype</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#aaa">90</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">27</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">30,0%</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#00bcd4">28</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">5.</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Orange Chicken</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#aaa">83</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">22</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#fbbc04">26,5%</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#00bcd4">24</td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Oportunidades de Performance -->
+  <div class="oport-card">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+      <span style="font-size:20px">&#9889;</span>
+      <h3 style="font-family:'Playfair Display',serif;color:#fbbc04;font-size:17px;margin:0">Oportunidades de Performance</h3>
+    </div>
+    <p style="color:#666;font-size:12px;margin:0 0 16px">Insights acion&aacute;veis derivados dos dados do card&aacute;pio</p>
+    <div class="oport-grid">
+      <div class="oport-item">
+        <div class="oport-icon">&#127919;</div>
+        <div class="oport-title">Til&aacute;pia subaproveitada</div>
+        <div class="oport-body">Maior taxa de convers&atilde;o do card&aacute;pio (<strong style="color:#8bc34a">40,8%</strong>) mas apenas <strong style="color:#fff">76 visitas</strong> &mdash; atualizar a foto e subir no ranking do card&aacute;pio pode aumentar pedidos sem nenhuma mudan&ccedil;a na cozinha.</div>
+      </div>
+      <div class="oport-item">
+        <div class="oport-icon">&#128247;</div>
+        <div class="oport-title">Risoto converte pouco</div>
+        <div class="oport-body"><strong style="color:#fff">136 visitas</strong> mas apenas <strong style="color:#fbbc04">22,1% de convers&atilde;o</strong> &mdash; revisar foto, descri&ccedil;&atilde;o e posi&ccedil;&atilde;o no card&aacute;pio. A foto pode n&atilde;o estar refletindo a qualidade do prato.</div>
+      </div>
+      <div class="oport-item">
+        <div class="oport-icon">&#128722;</div>
+        <div class="oport-title">124 clientes abandonaram a sacola</div>
+        <div class="oport-body">Testar frete gr&aacute;tis acima de R$&nbsp;80 ou cupom de reativa&ccedil;&atilde;o pode recuperar 30&ndash;40% desses pedidos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top 5 Complementos -->
+  <h3 style="font-family:'Playfair Display',serif;color:#fff;margin:28px 0 14px;font-size:18px">
+    Top 5 Complementos
+    <em style="color:#e040fb;font-size:13px;font-family:'DM Sans',sans-serif;font-style:normal;margin-left:8px">por n&uacute;mero de pedidos</em>
+  </h3>
+  <div style="background:#0d0d0d;border:1px solid #222;border-radius:12px;overflow:hidden">
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr style="border-bottom:1px solid #222">
+          <th style="padding:10px 14px;text-align:center;font-size:10px;color:#444;width:40px">#</th>
+          <th style="padding:10px 14px;text-align:left;font-size:10px;color:#444">Complemento</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;color:#EA1D2C">Pedidos</th>
+          <th style="padding:10px 14px;text-align:right;font-size:10px;color:#444">Qtd Vendida</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#111111">
+  <td style="padding:10px 14px;text-align:center;font-size:18px">&#129351;</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Mix de folhas oriental e gohan</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">18</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">19</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">&#129352;</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Gohan</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">17</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">19</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">&#129353;</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Salmão</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">15</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">16</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">4.</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Sunomono de pepino</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">14</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">17</td>
+</tr><tr>
+  <td style="padding:10px 14px;text-align:center;font-size:18px">5.</td>
+  <td style="padding:10px 14px;color:#fff;font-weight:500">Molho ponzu</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#EA1D2C;font-weight:700">14</td>
+  <td style="padding:10px 14px;text-align:right;font-family:'JetBrains Mono',monospace;color:#8bc34a">15</td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Insight iFood -->
+  <div class="ibox" style="border-left-color:#EA1D2C;background:rgba(234,29,44,.05);margin-top:24px">
+    <span class="ilab" style="color:#EA1D2C">&#128202; An&aacute;lise iFood &mdash; Fevereiro 2026</span>
+    O almoço concentra <strong>60,5%</strong> dos pedidos (150) e <strong>61,1%</strong> do faturamento bruto. Crédito domina os pagamentos (54,0%), seguido de Carteira Digital e PIX (15,7% cada). A taxa de cancelamento de <strong>2,4%</strong> é baixa e saudável. O funil do card&aacute;pio mostra <strong>124</strong> clientes que adicionaram &agrave; sacola mas n&atilde;o finalizaram — oportunidade via promo&ccedil;&otilde;es ou redu&ccedil;&atilde;o de tempo de entrega.
+  </div>
+
+</section>
+<!-- ██████████████ FIM SEÇÃO IFOOD ██████████████ -->
+
 </main>
 
 <footer>
